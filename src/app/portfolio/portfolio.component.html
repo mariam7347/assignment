@@ -1,0 +1,38 @@
+<div class="my-5">
+    <div class="container">
+        <div class="row gy-5">
+            <div class="bg-blue"> 
+                <h1 class="text-center text-uppercase fw-bolder pt-5">portfolio component</h1>
+                <div class="d-flex justify-content-center align-items-center pt-2">
+                    <div class="design me-3"></div>
+                    <i class="fa-solid fa-star"></i>
+                    <div class="design ms-3"></div>
+                    </div>
+            </div>
+            
+               @for (photo of photos; track $index) {
+                <div class="col-md-4">
+                
+                    <div class=" picture position-relative" (click)="selectPhoto(photo)" >
+                            <img [src]="photo" alt="pictures"   class=" photo w-100 border rounded-2">
+                            <div class="layer d-flex justify-content-center align-items-center">
+                                <i class="fa-solid fa-plus fa-2xl text-white display-1 fw-bold "></i>
+                            </div>
+                    </div>
+                </div>
+            
+              } 
+
+              @if (selectedPhoto) {
+                <div class="bg-primary bg-opacity-50 overlay" (click)="closePhoto()">
+                    <img [src]="selectedPhoto" alt="selected photo" class="center-photo">
+                  </div>
+              }
+             
+
+              
+              
+           
+        </div>
+    </div>
+</div>

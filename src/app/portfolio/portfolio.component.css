@@ -1,0 +1,43 @@
+.bg-blue{
+    color: #2c3e50;
+}
+
+.design{
+    background-color: #2c3e50;
+    height: 4px;
+    width: 80px; 
+}
+
+ .layer{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1abc9ce6;
+    opacity: 0;
+    transition: all .6s;
+    
+}
+.picture:hover .layer{
+    opacity: 1; 
+} 
+
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+  .center-photo {
+    width: 600px;
+  }
+  
+ 
+  
